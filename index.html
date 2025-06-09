@@ -47,5 +47,12 @@
   <p>
     <a href="https://example.com/nextclue" target="_blank">Click here if you dare...</a>
   </p>
+  <script>
+    const encodedLink = "aHR0cHM6Ly9leGFtcGxlLmNvbS9uZXh0Y2x1ZQ=="; // <-- Cámbialo al link real en Base64
+    const decodedLink = atob(encodedLink);
+    document.getElementById("secretLink").addEventListener("click", () => {
+      window.open(decodedLink, "_blank");
+    });
+  </script>
 </body>
 </html>
